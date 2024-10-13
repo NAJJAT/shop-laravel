@@ -17,19 +17,17 @@
 
 			<div class="row">
 				@foreach ($categories as $item)					
-    <div class="col-lg-4 col-md-6 text-center">
-        <div class="single-product-item">
-            <div class="product-image">
-				<a href="/product/{{$item->id}}">
-				<img src="{{ url($item->imagepath) }}" style="width: 100%; height: auto; max-height: 200px;" alt="{{ $item->naam }}">
-			</a>
-            </div>
-            
-            <h3>{{ $item->naam }}</h3>
-            <p>{{ $item->description }}</p>
-        </div>
-    </div>
-@endforeach
+					<div class="col-lg-4 col-md-6 text-center">
+						<div class="single-product-item">
+							<div class="product-image">
+								<a href="/product/{{$item->id}}">
+								<img src="{{ url($item->imagepath) }}" style="width: 100%; height: auto; max-height: 200px;" alt="{{ $item->naam }}"></a>
+							</div> 
+								<h3>{{ $item->naam }}</h3>
+								<p>{{ $item->description }}</p>
+							</div>
+						</div>
+				@endforeach
 
 
 			</div>

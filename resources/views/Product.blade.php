@@ -14,9 +14,9 @@
 					</div>
 				</div>
 				<div class="row">
-					@foreach ($products as $item)
+@foreach ($products as $item)
     <div class="col-lg-4 col-md-6 text-center">
-        <div class="single-product-item">
+        <div class="/Single-Product">
             <div class="product-image">
                 <a href="{{ url('single-product', $item->id) }}">
                     <img src="{{ url($item->imagepath) }}" style="width: 300px; height: 300px;" alt="{{ $item->naam }}">

@@ -33,6 +33,13 @@ Route::get('/product/{catid?}', function ($catid = null) {
     }
 });
 
+//product detail    
+
+Route::get('/product-detail/{id}', function ($id) {
+    $result = DB::table('product')->where('id', $id)->first();
+    return view('product-detail', ['product' => $result]);
+});
+
 
 //master
 Route::get('/master', function () {
@@ -51,6 +58,30 @@ Route::get('/about', function () {
 }
 );
 
-//contact
+//admin dashboard
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+}
+);
+///Contact
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+//prudent  
+
+Route::get('/Single-Product', function () {
+
+    //retuen  the product detail
+    $product = DB::table('product')->where('id', 1)->first();
+    //return the view with product details
+    return view('single-product', ['product' => $product]);
+
+});
+
+
+
 
 
